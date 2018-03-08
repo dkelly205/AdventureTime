@@ -1,4 +1,4 @@
-public class Fighter extends Player implements Actionable {
+public class Fighter extends Player implements Attackable {
 
     private FighterType type;
     private WeaponType weapon;
@@ -15,5 +15,15 @@ public class Fighter extends Player implements Actionable {
 
     public WeaponType getWeapon() {
         return weapon;
+    }
+
+    @Override
+    public int attack() {
+        return this.weapon.getDamage();
+    }
+
+
+    public void setWeapon(WeaponType weapon) {
+        this.weapon = weapon;
     }
 }

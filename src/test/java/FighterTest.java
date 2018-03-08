@@ -34,4 +34,14 @@ public class FighterTest {
         assertEquals(WeaponType.AXE, dwarf.getWeapon());
     }
 
+    @Test
+    public void canAttack() {
+        assertEquals(40, dwarf.attack());
+    }
+
+    @Test
+    public void canChangeWeapon() {
+        dwarf.setWeapon(WeaponType.CLUB);
+        assertEquals(WeaponType.CLUB, dwarf.getWeapon());
+    }
 }
