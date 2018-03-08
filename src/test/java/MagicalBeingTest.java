@@ -16,4 +16,19 @@ public class MagicalBeingTest {
     public void testName() {
         assertEquals("Gandolf", wizard.getName());
     }
+
+    @Test
+    public void testWeapon() {
+        assertEquals(WeaponType.WAND,wizard.getWeapon());
+    }
+
+    @Test
+    public void testType() {
+        assertEquals(MagicalBeingType.WIZARD, wizard.getType());
+    }
+
+    @Test
+    public void testCanCastSpell(){
+        assertEquals(5 ,wizard.attack());
+    }
 }

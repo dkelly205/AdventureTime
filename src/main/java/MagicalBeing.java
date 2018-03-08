@@ -1,4 +1,4 @@
-public class MagicalBeing extends Player {
+public class MagicalBeing extends Player implements Attackable{
 
     private MagicalBeingType type;
     private WeaponType weapon;
@@ -8,5 +8,18 @@ public class MagicalBeing extends Player {
         super(name, health);
         this.type = type;
         this.weapon = weapon;
+    }
+
+    public MagicalBeingType getType() {
+        return type;
+    }
+
+    public WeaponType getWeapon() {
+        return weapon;
+    }
+
+    @Override
+    public int attack() {
+        return this.weapon.getDamage();
     }
 }
