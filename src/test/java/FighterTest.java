@@ -11,9 +11,7 @@ public class FighterTest {
 
     @Before
     public void before() {
-        dwarf = new Fighter(FighterType.DWARF, "Mordo", 100);
-        barbarian= new Fighter(FighterType.BARBARIAN, "Conan", 150);
-        knight = new Fighter(FighterType.KNIGHT, "Shug", 250);
+        dwarf = new Fighter(FighterType.DWARF, "Mordo", 100, WeaponType.AXE);
     }
 
     @Test
@@ -30,4 +28,10 @@ public class FighterTest {
     public void canGetType() {
         assertEquals(FighterType.DWARF, dwarf.getType());
     }
+
+    @Test
+    public void canGetWeapon() {
+        assertEquals(WeaponType.AXE, dwarf.getWeapon());
+    }
+
 }
