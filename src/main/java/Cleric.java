@@ -1,6 +1,13 @@
 public class Cleric extends Player {
 
-    public Cleric(String name, int health) {
+    private HealType heal;
+
+    public Cleric(String name, int health, HealType heal) {
         super(name, health);
+        this.heal = heal;
+    }
+
+    public void healPlayer(Player player, HealType heal){
+        player.setHealth(heal.healPlayer());
     }
 }
