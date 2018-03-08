@@ -10,4 +10,12 @@ public class Cleric extends Player {
     public void healPlayer(Player player, HealType heal){
         player.setHealth(heal.healPlayer());
     }
+
+    public void setHeal(HealType heal) {
+        this.heal = heal;
+    }
+
+    public HealType getHeal() {
+        return heal;
+    }
 }

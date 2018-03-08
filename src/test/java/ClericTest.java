@@ -1,3 +1,4 @@
+import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,6 +24,12 @@ public class ClericTest {
     @Test
     public void testHealth(){
         assertEquals(100, cleric.getHealth());
+    }
+
+    @Test
+    public void canChangeHealType() {
+        cleric.setHeal(HealType.HERBS);
+        assertEquals(HealType.HERBS, cleric.getHeal());
     }
 
     @Test
