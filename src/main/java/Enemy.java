@@ -4,7 +4,7 @@ public class Enemy implements Attackable{
     private WeaponType weapon;
     private int health;
 
-    public Fighter(EnemyType enemy, int health, WeaponType weapon) {
+    public Enemy(EnemyType enemy, int health, WeaponType weapon) {
         this.health = health;
         this.enemy = enemy;
         this.weapon = weapon;
@@ -21,5 +21,9 @@ public class Enemy implements Attackable{
     @Override
     public int attack() {
         return this.weapon.getDamage();
+    }
+
+    public int getHealth() {
+        return health;
     }
 }
