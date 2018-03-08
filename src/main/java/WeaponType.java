@@ -1,7 +1,9 @@
 public enum WeaponType {
     SWORD(30),
     AXE(40),
-    CLUB(20);
+    CLUB(20),
+    WAND(5),
+    STAFF(15);
 
     private int damage;
 
