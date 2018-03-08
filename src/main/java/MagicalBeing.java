@@ -3,13 +3,15 @@ public class MagicalBeing extends Player implements Attackable, Castable{
     private MagicalBeingType type;
     private WeaponType weapon;
     private SpellType spell;
+    private CreatureType creature;
 
 
-    public MagicalBeing(MagicalBeingType type, String name, int health, WeaponType weapon, SpellType spell) {
+    public MagicalBeing(MagicalBeingType type, String name, int health, WeaponType weapon, SpellType spell, CreatureType creature) {
         super(name, health);
         this.type = type;
         this.weapon = weapon;
         this.spell = spell;
+        this.creature = creature;
     }
 
     public MagicalBeingType getType() {
@@ -18,6 +20,10 @@ public class MagicalBeing extends Player implements Attackable, Castable{
 
     public WeaponType getWeapon() {
         return weapon;
+    }
+
+    public CreatureType getCreature() {
+        return creature;
     }
 
     @Override
@@ -36,5 +42,9 @@ public class MagicalBeing extends Player implements Attackable, Castable{
 
     public SpellType getSpell() {
         return spell;
+    }
+
+    public void setCreature(CreatureType creature) {
+        this.creature = creature;
     }
 }

@@ -4,7 +4,7 @@ public enum CreatureType {
 
     private int creatureHealth;
 
-    SpellType(int creatureHealth){
+    CreatureType(int creatureHealth){
         this.creatureHealth = creatureHealth;
     }
 

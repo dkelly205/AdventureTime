@@ -1,3 +1,4 @@
+import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,7 +10,7 @@ public class MagicalBeingTest {
 
     @Before
     public void before() {
-        wizard = new MagicalBeing(MagicalBeingType.WIZARD, "Gandolf", 100, WeaponType.WAND, SpellType.FIREBALL);
+        wizard = new MagicalBeing(MagicalBeingType.WIZARD, "Gandolf", 100, WeaponType.WAND, SpellType.FIREBALL, CreatureType.DRAGON);
     }
 
     @Test
@@ -36,6 +37,18 @@ public class MagicalBeingTest {
     public void testCanChangeSpell() {
         wizard.setSpell(SpellType.LIGHTENING_STRIKE);
         assertEquals(SpellType.LIGHTENING_STRIKE, wizard.getSpell());
+    }
+
+    @Test
+    public void canGetCreature() {
+        assertEquals(CreatureType.DRAGON, wizard.getCreature());
+    }
+
+
+    @Test
+    public void canChangeWeapon() {
+        wizard.setCreature(CreatureType.OGRE);
+        assertEquals(CreatureType.OGRE, wizard.getCreature());
     }
 }
 
