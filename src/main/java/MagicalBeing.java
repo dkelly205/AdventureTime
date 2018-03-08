@@ -1,4 +1,4 @@
-public class MagicalBeing extends Player implements Attackable{
+public class MagicalBeing extends Player implements Attackable, Castable{
 
     private MagicalBeingType type;
     private WeaponType weapon;
@@ -23,5 +23,18 @@ public class MagicalBeing extends Player implements Attackable{
     @Override
     public int attack() {
         return this.weapon.getDamage();
+    }
+
+    @Override
+    public int castSpell() {
+        return this.spell.getDamage();
+    }
+
+    public void setSpell(SpellType spell) {
+        this.spell = spell;
+    }
+
+    public SpellType getSpell() {
+        return spell;
     }
 }

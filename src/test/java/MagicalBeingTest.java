@@ -9,7 +9,7 @@ public class MagicalBeingTest {
 
     @Before
     public void before() {
-        wizard = new MagicalBeing(MagicalBeingType.WIZARD, "Gandolf", 100, WeaponType.WAND);
+        wizard = new MagicalBeing(MagicalBeingType.WIZARD, "Gandolf", 100, WeaponType.WAND, SpellType.FIREBALL);
     }
 
     @Test
@@ -29,6 +29,13 @@ public class MagicalBeingTest {
 
     @Test
     public void testCanCastSpell(){
-        assertEquals(5 ,wizard.attack());
+        assertEquals(50 ,wizard.castSpell());
+    }
+
+    @Test
+    public void testCanChangeSpell() {
+        wizard.setSpell(SpellType.LIGHTENING_STRIKE);
+        assertEquals(SpellType.LIGHTENING_STRIKE, wizard.getSpell());
     }
 }
+
