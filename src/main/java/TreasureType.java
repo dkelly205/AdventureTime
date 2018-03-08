@@ -4,7 +4,7 @@ public enum TreasureType {
 
     private int value;
 
-    WeaponType(int value){
+    TreasureType(int value){
         this.value = value;
     }
 

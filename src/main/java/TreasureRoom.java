@@ -1,6 +1,9 @@
 public class TreasureRoom extends Room {
 
-    public TreasureRoom(String name) {
+    private TreasureType treasure;
+
+    public TreasureRoom(String name, TreasureType treasure) {
         super(name);
+        this.treasure = treasure;
     }
 }

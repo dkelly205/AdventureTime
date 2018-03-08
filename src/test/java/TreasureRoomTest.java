@@ -7,6 +7,9 @@ public class TreasureRoomTest {
 
     @Before
     public void before() {
-        treasureRoom = new TreasureRoom("Treasure room");
+        treasureRoom = new TreasureRoom("Treasure room", TreasureType.GOLD);
     }
+
+
+
 }
