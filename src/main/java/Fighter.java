@@ -1,4 +1,4 @@
-public class Fighter extends Player {
+public class Fighter extends Player implements Actionable {
 
     private FighterType type;
     private WeaponType weapon;
